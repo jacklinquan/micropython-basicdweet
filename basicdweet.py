@@ -4,7 +4,7 @@
 - License: MIT
 """
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __all__ = ["BasicDweetError", "dweet_for", "get_latest_dweet_for", "get_dweets_for"]
 
 import json
@@ -34,21 +34,31 @@ def _request(method, url, base_url=BASE_URL, **kwargs):
     return response_json["with"]
 
 
-def dweet_for(thing_name, payload, base_url=BASE_URL):
-    data = json.dumps(payload)
-    headers = {"Content-type": "application/json"}
+def dweet_for(thing_name, payload, base_url=BASE_URL, **kwargs):
+    kwargs["data"] = json.dumps(payload)
+    kwargs.setdefault("headers", {})
+    kwargs["headers"].update({"Content-Type": "application/json"})
     return _request(
         "post",
         f"/dweet/for/{thing_name}",
         base_url=base_url,
-        data=data,
-        headers=headers,
+        **kwargs,
     )
 
 
-def get_latest_dweet_for(thing_name, base_url=BASE_URL):
-    return _request("get", f"/get/latest/dweet/for/{thing_name}", base_url=base_url)
+def get_latest_dweet_for(thing_name, base_url=BASE_URL, **kwargs):
+    return _request(
+        "get",
+        f"/get/latest/dweet/for/{thing_name}",
+        base_url=base_url,
+        **kwargs,
+    )
 
 
-def get_dweets_for(thing_name, base_url=BASE_URL):
-    return _request("get", f"/get/dweets/for/{thing_name}", base_url=base_url)
+def get_dweets_for(thing_name, base_url=BASE_URL, **kwargs):
+    return _request(
+        "get",
+        f"/get/dweets/for/{thing_name}",
+        base_url=base_url,
+        **kwargs,
+    )

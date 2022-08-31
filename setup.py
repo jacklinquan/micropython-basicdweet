@@ -8,7 +8,7 @@ import sdist_upip
 
 setup(
     name="micropython-basicdweet",
-    version="0.2.0",
+    version="0.3.0",
     description="A python module for very basic APIs of the free dweet service.",
     long_description="https://github.com/jacklinquan/micropython-basicdweet",
     long_description_content_type="text/markdown",
