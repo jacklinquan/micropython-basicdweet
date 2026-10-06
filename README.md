@@ -1,14 +1,10 @@
 # micropython-basicdweet
 [![PayPal Donate][paypal_img]][paypal_link]
-[![PyPI version][pypi_img]][pypi_link]
-[![Downloads][downloads_img]][downloads_link]
+
 
   [paypal_img]: https://github.com/jacklinquan/images/blob/master/paypal_donate_badge.svg
   [paypal_link]: https://www.paypal.me/kanewalker505
-  [pypi_img]: https://badge.fury.io/py/micropython-basicdweet.svg
-  [pypi_link]: https://badge.fury.io/py/micropython-basicdweet
-  [downloads_img]: https://pepy.tech/badge/micropython-basicdweet
-  [downloads_link]: https://pepy.tech/project/micropython-basicdweet
+
 
 A python module for very basic APIs of the free dweet service.
 Dweet is a simple machine-to-machine (M2M) service from [dweetr.io](https://dweetr.io).
