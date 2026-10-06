@@ -11,7 +11,7 @@
   [downloads_link]: https://pepy.tech/project/micropython-basicdweet
 
 A python module for very basic APIs of the free dweet service.
-Dweet is a simple machine-to-machine (M2M) service from [dweet.io](https://dweetr.io).
+Dweet is a simple machine-to-machine (M2M) service from [dweetr.io](https://dweetr.io).
 
 This module only supports these dweet APIs of the free dweet service:
 
