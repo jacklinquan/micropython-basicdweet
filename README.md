@@ -37,3 +37,8 @@ Copy basicdweet.py (basicdweet.mpy) to the MicroPython device.
 >>> basicdweet.get_dweets_for('YOUR_THING')
 [{'content': {'YOUR_DATA': 'YOUR_VALUE_2'}, 'created': '2022-05-27T06:19:08.081Z', 'thing': 'YOUR_THING'}, {'content': {'YOUR_DATA': 'YOUR_VALUE'}, 'created': '2022-05-27T06:17:48.127Z', 'thing': 'YOUR_THING'}]
 ```
+
+# Also acceptable 
+```
+basicdweet.dweet_for('YOUR_THING', 'YOUR_DATA=YOUR_VALUE&MORE_DATA=EXTRA_VALUE')
+```
