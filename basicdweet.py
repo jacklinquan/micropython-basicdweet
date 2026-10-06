@@ -14,7 +14,7 @@ try:
 except ImportError:
     import requests
 
-BASE_URL = "https://dweet.io"
+BASE_URL = "https://dweetr.io"
 
 
 class BasicDweetError(Exception):
@@ -39,8 +39,8 @@ def dweet_for(thing_name, payload, base_url=BASE_URL, **kwargs):
     kwargs.setdefault("headers", {})
     kwargs["headers"].update({"Content-Type": "application/json"})
     return _request(
-        "post",
-        f"/dweet/for/{thing_name}",
+        "get",
+        f"/dweet/for/{thing_name}?params={payload}",
         base_url=base_url,
         **kwargs,
     )
