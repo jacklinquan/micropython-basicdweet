@@ -39,6 +39,9 @@ Copy basicdweet.py (basicdweet.mpy) to the MicroPython device.
 ```
 
 # Also acceptable 
+
+*** Store multiple values from single command
+
 ```
 basicdweet.dweet_for('YOUR_THING', 'YOUR_DATA=YOUR_VALUE&MORE_DATA=EXTRA_VALUE')
 ```
